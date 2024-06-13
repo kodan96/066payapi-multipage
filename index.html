@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.min.css">
     <title>PayAPI | Start Building With Us</title>
 </head>
 <body>
     <header>
         <div class="header__logo">
-            <img src="./assets/shared/desktop/logo.svg" alt="PayAPI Logo" loading="lazy">
+            <img src="./assets/shared/desktop/logo.svg" alt="PayAPI Logo" loading="lazy" class="logo">
         </div>
-        <nav>
+        <nav aria-label="primary">
             <ul>
                 <li><a href="./html/pricing.html">Pricing</a></li>
                 <li><a href="./html/about.html">About</a></li>
@@ -19,6 +22,12 @@
             </ul>
             <a href="#" class="cta">Schedule a Demo</a>
         </nav>
+        <div class="menu__toggles">
+            <img src="./assets/shared/mobile/menu.svg" aria-label="open" aria-hidden="false" aria-expanded="true" aria-controls="nav" alt=""
+            class="open">
+            <img src="./assets/shared/mobile/close.svg" aria-label="close" aria-hidden="true" aria-expanded="false" aria-controls="nav" alt=""
+            class="close">
+        </div>
     </header>
     <main>
         <div class="hero" role="banner">
@@ -35,72 +44,96 @@
                 <p>Have any questions? <a href="./html/contact.html">Contact Us</a></p>
             </div>
         </div>
+    
+        <section class="partners">
+            <div class="partners_img">
+                <img src="./assets/shared/desktop/tesla.svg" alt="Tesla Logo" loading="lazy">
+                <img src="./assets/shared/desktop/microsoft.svg" alt="Microsoft Logo" loading="lazy">
+                <img src="./assets/shared/desktop/hewlett-packard.svg" alt="HP Logo" loading="lazy">
+                <img src="./assets/shared/desktop/oracle.svg" alt="Oracle Logo" loading="lazy">
+                <img src="./assets/shared/desktop/google.svg" alt="Google Logo" loading="lazy">
+                <img src="./assets/shared/desktop/nvidia.svg" alt="Nvidia Logo" loading="lazy">
+            </div>
+            <div class="partners__txt">
+                <h2>Who we work with</h2>
+                <p>Today, millions of people around the world have successfully connected their accounts to apps they love using our API. We provide developers with the tools they need to create easy and accessible experiences for their users.</p>
+                <a href="./hmtl/about.html">About Us</a>
+            </div>
+        </section>
+        <section class="implementation">
+            <div class="implementation__img">
+                <img src="./assets/home/desktop/illustration-easy-to-implement.svg" alt="Code editor mockup" loading="lazy">
+            </div>
+            <div class="implementation__txt">
+                <h2>Easy to implement</h2>
+                <p>Our API comes with just a few lines of code. You'll be up and running in no time. We built our documentation page to integrate payments functionality with ease.</p>
+            </div>
+        </section>
+        <section class="simple">
+            <div class="simple__img">
+                <img src="./assets/home/desktop/illustration-simple-ui.svg" alt="Mobile interface mockups">
+            </div>
+            <div class="simple__txt">
+                <h2>Simple UI & UX</h2>
+                <p>Our pre-built form is easy to integrate in your app or website's checkout flow and designed to optimize conversion.</p>
+            </div>
+        </section>
+        <section class="services">
+            <div class="service__item">
+                <div class="service__item--img">
+                    <img src="./assets/home/desktop/icon-personal-finances.svg" alt="">
+                </div>
+                <div class="service__item--txt">
+                    <h2>Personal Finances</h2>
+                    <p>Consolidate financial data from multiple sources and categorize transactions up to 2 years of history. Analyze reports to reconcile activities in your account.</p>
+                </div>
+            </div>
+            <div class="service__item">
+                <div class="service__item--img">
+                    <img src="./assets/home/desktop/icon-banking-and-coverage.svg" alt="">
+                </div>
+                <div class="service__item--txt">
+                    <h2>Banking & Coverage</h2>
+                    <p>With our platform, you can speed up account onboarding and support ongoing payments for checking, savings, credit cards, and brokerage accounts.</p>
+                </div>
+            </div>
+            <div class="service__item">
+                <div class="service__item--img">
+                    <img src="./assets/home/desktop/icon-consumer-payments.svg" alt="">
+                </div>
+                <div class="service__item--txt">
+                    <h2>Consumer Payments</h2>
+                    <p>It's easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their accounts.</p>
+                </div>
+            </div>
+        </section>
+        <section class="subscribtion">
+            <form action="">
+                <legend>Ready to start?</legend>
+                <label for="email">Email address</label>
+                <div class="wrapper">
+                    <input type="email" id="email" placeholder="Enter email address">
+                    <a href="#" class="cta">Schedule a Demo</a>
+                </div>
+            </form>
+        </section>
     </main>
-    <section class="partners">
-        <div class="partners_img">
-            <img src="./assets/shared/desktop/tesla.svg" alt="Tesla Logo" loading="lazy">
-            <img src="./assets/shared/desktop/microsoft.svg" alt="Microsoft Logo" loading="lazy">
-            <img src="./assets/shared/desktop/hewlett-packard.svg" alt="HP Logo" loading="lazy">
-            <img src="./assets/shared/desktop/oracle.svg" alt="Oracle Logo" loading="lazy">
-            <img src="./assets/shared/desktop/google.svg" alt="Google Logo" loading="lazy">
-            <img src="./assets/shared/desktop/nvidia.svg" alt="Nvidia Logo" loading="lazy">
+    <footer>
+        <div class="footer__logo">
+            <img src="./assets/shared/desktop/logo_copy.svg" alt="PayAPI Logo" loading="lazy">
         </div>
-        <div class="partners__txt">
-            <h2>Who we work with</h2>
-            <p>Today, millions of people around the world have successfully connected their accounts to apps they love using our API. We provide developers with the tools they need to create easy and accessible experiences for their users.</p>
-            <a href="./hmtl/about.html">About Us</a>
+        <nav aria-label="footer">
+            <ul>
+                <li><a href="./html/pricing.html">Pricing</a></li>
+                <li><a href="./html/about.html">About</a></li>
+                <li><a href="./html/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="socials">
+            <a href=""><img src="./assets/shared/desktop/facebook.svg" alt=""></a>
+            <a href=""><img src="./assets/shared/desktop/twitter.svg" alt=""></a>
+            <a href=""><img src="./assets/shared/desktop/linkedin.svg" alt=""></a>
         </div>
-    </section>
-    <section class="implementation">
-        <div class="implementation__img">
-            <img src="./assets/home/desktop/illustration-easy-to-implement.svg" alt="Code editor mockup" loading="lazy">
-        </div>
-        <div class="implementation__txt">
-            <h2>Easy to implement</h2>
-            <p>Our API comes with just a few lines of code. You'll be up and running in no time. We built our documentation page to integrate payments functionality with ease.</p>
-        </div>
-    </section>
-    <section class="simple">
-        <div class="simple__img">
-            <img src="./assets/home/desktop/illustration-simple-ui.svg" alt="Mobile interface mockups">
-        </div>
-        <div class="simple__txt">
-            <h2>Simple UI & UX</h2>
-            <p>Our pre-built form is easy to integrate in your app or website's checkout flow and designed to optimize conversion.</p>
-        </div>
-    </section>
-    <section class="services">
-        <div class="service__item">
-            <div class="service__item--img">
-                <img src="./assets/home/desktop/icon-personal-finances.svg" alt="">
-            </div>
-            <div class="service__item--txt">
-                <h2>Personal Finances</h2>
-                <p>Consolidate financial data from multiple sources and categorize transactions up to 2 years of history. Analyze reports to reconcile activities in your account.</p>
-            </div>
-        </div>
-        <div class="service__item">
-            <div class="service__item--img">
-                <img src="./assets/home/desktop/icon-banking-and-coverage.svg" alt="">
-            </div>
-            <div class="service__item--txt">
-                <h2>Banking & Coverage</h2>
-                <p>With our platform, you can speed up account onboarding and support ongoing payments for checking, savings, credit cards, and brokerage accounts.</p>
-            </div>
-        </div>
-        <div class="service__item">
-            <div class="service__item--img">
-                <img src="./assets/home/desktop/icon-consumer-payments.svg" alt="">
-            </div>
-            <div class="service__item--txt">
-                <h2>Consumer Payments</h2>
-                <p>It's easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their accounts.</p>
-            </div>
-        </div>
-    </section>
-    <div class="section">
-        <h2>Ready to start?</h2>
-        
-    </div>
+    </footer>
 </body>
 </html>
