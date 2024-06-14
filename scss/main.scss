@@ -7,6 +7,16 @@ body {
     text-align: center;
 }
 
+.hidden {
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
 h2 {
     font-size: 2rem;
     color: $white;
@@ -21,6 +31,10 @@ p {
     color: $light-blue;
 }
 
+ul {
+    list-style: none;
+}
+
 a {
     font-family: 'Public Sans';
 }
@@ -32,20 +46,49 @@ header {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    width: 100%;
+    width: 100dvw;
     top: 0;
     left: 0;
+    box-sizing: border-box;
 
     .close {
         display: none;
+        position: relative;
+        z-index: 999;
     }
 
     .logo {
         margin-block: 2.5rem 2.5rem;
     }
 
+    .open:hover,
+    .close:hover {
+        opacity: .7;
+        cursor: pointer;
+    }
+
     nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100vh;
+        background-color: $mirage-blue;
+        z-index: 100;
+        padding-top: 8.75rem;
+        padding-inline: 1.5rem;
+        background-image: url(../assets/shared/desktop/bg-pattern-circle.svg);
+        background-repeat: no-repeat;
+        background-position: center -515px;
         display: none;
+
+        a:not([class="cta"]) {
+            color: #fff;
+        }
+
+        li {
+            margin-bottom: 2rem;
+        }
     }
 }
 
@@ -62,6 +105,7 @@ header {
         margin-inline: auto;
         position: relative;
         left: 1rem;
+        max-width: 300px;
     }
 
     h1 {
@@ -85,6 +129,7 @@ header {
         
         a {
             font-weight: 800;
+            color: $light-blue;
         }
     }
 
@@ -140,6 +185,7 @@ input {
 
         img {
             width: calc(50% - 2rem);
+            max-width: 130px;
         }
     }
 
@@ -164,7 +210,7 @@ input {
 .implementation {
 
     .implementation__img {
-
+        overflow: hidden;
         img {
             position: relative;
             left: 1rem;
@@ -196,6 +242,11 @@ input {
 
     h2 {
         color: $blue;
+    }
+
+    img {
+        width: 100%;
+        max-width: 500px;
     }
 }
 
@@ -273,5 +324,176 @@ footer {
         gap: 1.5rem;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media screen and (min-width: 750px) {
+
+    h2 {
+        font-size: 3rem;
+        line-height: 1.16;
+    }
+
+
+    header {
+        padding-inline: 2.5rem;
+
+        .logo {
+            margin-inline-end: 4rem;
+        }
+
+        nav {
+            position: unset;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: fit-content;
+            background-color: transparent;
+            background-image: none;
+            padding: 0;
+
+            .cta {
+                display: inline-block;
+                width: fit-content;
+                padding: 1rem 1.5rem;
+            }
+
+
+            li {
+                display: inline-block;
+                margin-bottom: 0;
+                margin-inline-end: 2.5rem;
+
+                a:not([class="cta"]) {
+                    font-weight: 800;
+                    color: $light-blue;
+                }
+            }
+
+
+           
+        }
+
+        .menu__toggles {
+            display: none;
+        }
+    }
+
+    .hero {
+        background-position: center -600px;
+        background-size: 120%;
+
+        h1{
+            font-size: 3rem;
+        }
+
+        
+
+        
+    }
+
+    .wrapper {
+        position: relative;
+        width: 60%;
+        margin-inline: auto;
+    }
+
+    .cta:not(header .cta) {
+        width: fit-content;
+        position: absolute;
+        padding: 1rem 1.5rem;
+        text-wrap: nowrap;
+        top: 0;
+        right: 0;
+    }
+    input {
+        width: 100%;
+        padding: 1.2rem;
+    }
+
+    .partners {
+        padding: 5.93rem 7.25rem;
+        background-position: center -530px;
+
+        .partners_img {
+            margin-bottom: 4rem;
+        }
+
+        .partners__txt {
+            padding-inline: 2.5rem;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .implementation__img {
+        img {
+            max-width: 445px;
+            margin-inline: auto;
+        }
+    }
+
+    .implementation .implementation__txt {
+        padding-inline: 6.125rem;
+    }
+
+    .simple {
+
+        img {
+            margin-inline: auto;
+        }
+    }
+
+    .services {
+        display: flex;
+        padding-inline: 2.5rem;
+        gap: .5rem;
+
+        .service__item .service__item--txt {
+            padding: 0;
+            margin-bottom: 6.25rem;
+        }
+    }
+
+    .subscribtion {
+        margin-bottom: 6.125rem;
+        
+
+        legend {
+            font-size: 3rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 2.5rem;
+        align-items: center;
+        background-position: 550px center;
+
+        img {
+            margin-bottom: 0;
+        }
+
+        nav {
+            height: fit-content;
+
+            li {
+                display: inline;
+                margin-bottom: 0;
+                margin-right: 2rem;
+            }
+
+            a {
+                margin-bottom: 0;
+            }
+        }
+
+        
+
+
     }
 }
